@@ -18,7 +18,7 @@ function App() {
   //fetches data
   const fetchAllRecipeData =async()=>{
     const response = await fetch(
-      "https://api.spoonacular.com/recipes/findByNutrients?maxCalories=1000&number=10&apiKey="+API_KEY
+      "https://api.spoonacular.com/recipes/findByNutrients?maxCalories=1000&number=1&apiKey="+API_KEY
     )
     const json= await response.json();
     setList(json ||[]);

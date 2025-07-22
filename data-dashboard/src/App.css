@@ -103,3 +103,15 @@ h1{
   border-radius: 10px;
   padding: 10px;
 }
+
+.recipe-details-page{
+  background-color: lightblue;
+  padding: 20px;
+  border: 2px, solid, black;
+  border-radius: 10px;
+}
+
+.summary, .instructions{
+  padding: 40px;
+  margin: 30px;
+}
