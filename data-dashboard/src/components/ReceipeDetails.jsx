@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import SideNav from "./SideNav";
 
 const RecipeDetails = () => {
   const { id } = useParams(); // assumes route like /recipe/:id
@@ -20,7 +21,10 @@ const RecipeDetails = () => {
 
   return (
     <div>
-
+        <div>
+        <SideNav/>
+        </div>
+        <div style={{marginLeft: '25%'}}>
         <h1>{recipe.title}</h1>
         <div className="recipe-details-page">
         
@@ -39,6 +43,7 @@ const RecipeDetails = () => {
         <div className='instructions'>
             <strong>Instructions:</strong>
             <div dangerouslySetInnerHTML={{ __html: recipe.instructions }} />
+        </div>
         </div>
         </div>
     </div>

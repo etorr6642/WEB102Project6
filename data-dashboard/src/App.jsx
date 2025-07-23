@@ -1,6 +1,10 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import RecipeInfo from './components/RecipeInfo'
+import SideNav from './components/SideNav'
+import {
+  BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend
+} from 'recharts';
 
 const API_KEY = import.meta.env.VITE_APP_API_KEY
 
@@ -18,7 +22,7 @@ function App() {
   //fetches data
   const fetchAllRecipeData =async()=>{
     const response = await fetch(
-      "https://api.spoonacular.com/recipes/findByNutrients?maxCalories=1000&number=1&apiKey="+API_KEY
+      "https://api.spoonacular.com/recipes/findByNutrients?maxCalories=1000&number=5&apiKey="+API_KEY
     )
     const json= await response.json();
     setList(json ||[]);
@@ -73,8 +77,27 @@ function App() {
   ? Math.max(...displayedRecipes.map(recipe => recipe.calories))
   : 0;
 
+  const barChartData = displayedRecipes.map(recipe => ({
+  title: recipe.title,
+  calories: recipe.calories
+}));
+
+const pieChartData = [
+  { name: 'Low (<300)', value: displayedRecipes.filter(r => r.calories < 300).length },
+  { name: 'Medium (300–600)', value: displayedRecipes.filter(r => r.calories >= 300 && r.calories <= 600).length },
+  { name: 'High (600–900)', value: displayedRecipes.filter(r => r.calories > 600 && r.calories <= 900).length },
+  { name: 'Very High (>900)', value: displayedRecipes.filter(r => r.calories > 900).length }
+];
+
+const pieColors = ['#82ca9d', '#8884d8', '#ffc658', '#ff7f7f'];
+
   return (
     <>
+
+      <div>
+        <SideNav/>
+      </div>
+      <div style={{marginLeft: '15%'}}>
        <div className='whole-page'>
         {/* title */}
         <h1>Low Calorie Recipe List</h1>
@@ -89,6 +112,36 @@ function App() {
           {/* max calories container */}
           <div className='maxCalories'>Max Calories: {maxCalories}</div>
         </div>
+
+          <div className="chart-container">
+            <div className="bar-chart">
+              <h3>Calories per Recipe</h3>
+              <ResponsiveContainer width="100%" height="100%">
+                <BarChart data={barChartData}>
+                  <XAxis dataKey="title" hide />
+                  <YAxis />
+                  <Tooltip />
+                  <Bar dataKey="calories" fill="#8884d8" />
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
+          
+            <div className="pie-chart">
+              <h3>Calorie Range Distribution</h3>
+              <ResponsiveContainer width="100%" height="100%">
+                <PieChart>
+                  <Pie data={pieChartData} dataKey="value" nameKey="name" outerRadius={100} label>
+                    {pieChartData.map((entry, index) => (
+                      <Cell key={`cell-${index}`} fill={pieColors[index % pieColors.length]} />
+                    ))}
+                  </Pie>
+                  <Tooltip />
+                  <Legend wrapperStyle={{ padding: 10 }} className="legend-background" />
+                </PieChart>
+              </ResponsiveContainer>
+            </div>
+          </div>
+    
 
         {/* search container */}
         <div className='search'>
@@ -128,6 +181,7 @@ function App() {
           ))}
         </ul>
         
+    </div>
     </div>
     </>
   )

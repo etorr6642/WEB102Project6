@@ -1,10 +1,10 @@
-# Web Development Project 6 - *Name of App Here*
+# Web Development Project 6 - *Low Calorie Recipe List*
 
 Submitted by: **Your Name Here**
 
-This web app: **insert description**
+This web app: **This web app: This app will display 5 low calorie recipes with links to the full recipe. Each recipe will display a pictures, calories, prep time, and serving size. The user can search by title or show recipes by calorie range. The top of the page will show the number of recipes displayed as well as the average calories and the max calories in the list. Clicking on a recipe will show more detail about that recipe. A side bar is provided for navigation. Two graphics are show that provide more information about the range of calories and the calories per recipe**
 
-Time spent: **X** hours spent in total
+Time spent: **5** hours spent in total
 
 ## Required Features
 
@@ -17,14 +17,14 @@ The following **required** functionality is completed:
   - *To ensure an accurate grade, your sidebar **must** be viewable when showing the details view in your recording.*
 - [x] **Each detail view of an item has a direct, unique URL link to that item’s detail view page**
   -  *To ensure an accurate grade, the URL/address bar of your web browser **must** be viewable in your recording.*
-- [ ] **The app includes at least two unique charts developed using the fetched data that tell an interesting story**
+- [x] **The app includes at least two unique charts developed using the fetched data that tell an interesting story**
   - At least two charts should be incorporated into the dashboard view of the site
   - Each chart should describe a different aspect of the dataset
 
 
 The following **optional** features are implemented:
 
-- [ ] The site’s customized dashboard contains more content that explains what is interesting about the data 
+- [x] The site’s customized dashboard contains more content that explains what is interesting about the data 
   - e.g., an additional description, graph annotation, suggestion for which filters to use, or an additional page that explains more about the data
 - [ ] The site allows users to toggle between different data visualizations
   - User should be able to use some mechanism to toggle between displaying and hiding visualizations 
@@ -38,22 +38,19 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+https://i.imgur.com/EMDuQDG.gif
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+GIF created with ScreenToGif  
+
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+With this project, I had trouble implmenting the sidebad. I got it working but had to do research on how to create it so that it would not overlap the information on the webpage. 
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright 2025 Edward Torres
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

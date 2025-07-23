@@ -12,11 +12,9 @@ createRoot(document.getElementById('root')).render(
   // <StrictMode>
     <BrowserRouter>
     <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index={true} path="/" element={<App />} />
-          <Route path="/recipe/:id" element={<DetailView />} />
-          <Route path="*" element={ <NotFound /> } />
-      </Route>
+        <Route index={true} path="/" element={<App />} />
+        <Route path="/recipe/:id" element={<DetailView />} />
+        <Route path="*" element={ <NotFound /> } />
     </Routes>
   </BrowserRouter>
   // </StrictMode>,
