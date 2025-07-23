@@ -2,7 +2,7 @@
 
 Submitted by: **Edward Torres**
 
-This web app: **This web app: This app will display 5 low calorie recipes with links to the full recipe. Each recipe will display a pictures, calories, prep time, and serving size. The user can search by title or show recipes by calorie range. The top of the page will show the number of recipes displayed as well as the average calories and the max calories in the list. Clicking on a recipe will show more detail about that recipe. A side bar is provided for navigation. Two graphics are show that provide more information about the range of calories and the calories per recipe**
+This web app: **This app will display 5 low calorie recipes with links to the full recipe. Each recipe will display a pictures, calories, prep time, and serving size. The user can search by title or show recipes by calorie range. The top of the page will show the number of recipes displayed as well as the average calories and the max calories in the list. Clicking on a recipe will show more detail about that recipe. A side bar is provided for navigation. Two graphics are show that provide more information about the range of calories and the calories per recipe**
 
 Time spent: **5** hours spent in total
 
