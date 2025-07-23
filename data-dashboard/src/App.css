@@ -22,6 +22,7 @@ html, body {
   padding-left: 100px;
   padding-right:100px;
   border: 5px, solid, black;
+  width: 100%;
 }
 
 
@@ -36,6 +37,7 @@ html, body {
   border-radius: 10px;
   border: 5px, solid, black;
   background-color: pink;
+  width: 100%;
 }
 
 .calorie, .title{
@@ -102,4 +104,87 @@ h1{
   border: 2px, solid, black;
   border-radius: 10px;
   padding: 10px;
+}
+
+.recipe-details-page{
+  background-color: lightblue;
+  padding: 20px;
+  border: 2px, solid, black;
+  border-radius: 10px;
+}
+
+.summary, .instructions{
+  padding: 40px;
+  margin: 30px;
+}
+
+.sideNav{
+  height: 100%;
+  width: 20%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: pink;
+  border: 2px, solid, black;
+  border-radius: 10px;
+}
+
+.home-link{
+  background-color: lightblue;
+  padding: 20px;
+  border: 2px, solid, black;
+  border-radius: 10px;
+  list-style: none;
+  font-size: larger;
+}
+
+.chart-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin: 40px 0;
+}
+
+.pie-chart {
+  width: 80%;
+  height: 400px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bar-chart{
+   width: 80%;
+  height: 500px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.15);
+
+  display: flex;
+  justify-content: center;   /* horizontally center */
+  align-items: center;       /* vertically center */
+  box-sizing: border-box;
+}
+
+.bar-chart h3, .pie-chart h3 {
+  margin-bottom: 10px;
+}
+
+/* Apply background and padding only to the legend */
+.legend-background {
+  background-color: rgba(240, 240, 240, 0.9);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
